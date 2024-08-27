@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="22dp"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="@string/app_name"/>
+
+    <ImageView
+        android:id="@+id/ic_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        android:layout_marginTop="8dp"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/ic_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/baseline_more_vert_24"
+        android:layout_marginTop="8dp"
+        android:importantForAccessibility="no" />
+
+    <ImageView
+        android:id="@+id/img_phone"
+        android:layout_width="match_parent"
+        android:layout_alignTop="@+id/ic_back"
+        android:layout_marginTop="82dp"
+        android:layout_height="250dp"
+        android:src="@drawable/gala_bunga_matahari" />
+
+    <SeekBar
+        android:id="@+id/song_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="20"
+        android:layout_marginTop="368dp"/>
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_phone"
+        android:layout_alignTop="@+id/song_seekbar"
+        android:layout_alignBottom="@+id/txt_description"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/firasans_regular"
+        android:gravity="center"
+        android:text="@string/deskripsi"
+        tools:ignore="NotSibling" />
+
+    <TextView
+        android:id="@+id/txt_pencipta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_phone"
+        android:layout_alignTop="@+id/txt_description"
+        android:layout_alignBottom="@+id/txt_pencipta"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/firasans_semibold"
+        android:gravity="center"
+        android:text="@string/pencipta"
+        tools:ignore="NotSibling" />
+
+    <ImageView
+        android:id="@+id/ic_previous"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ic_play"
+        android:src="@drawable/baseline_skip_previous_24"
+        android:layout_below="@id/txt_pencipta"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:id="@+id/ic_play"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_play_circle_24"
+        android:layout_below="@id/txt_pencipta"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/ic_next"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/ic_play"
+        android:src="@drawable/baseline_skip_next_24"
+        android:layout_below="@id/txt_pencipta"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
